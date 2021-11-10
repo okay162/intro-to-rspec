@@ -25,7 +25,6 @@ describe MoviesController do
 			expect(Movie).to receive(:find_in_tmdb).with('hardware').and_return(fake_results)
 			get :search_tmdb, {:search_terms => 'hardware'}
    end
-    it 'calls the model method that performs TMDb search'
     it 'selects the Search Results template for rendering'
     it 'makes the TMDb search results available to that template' 
   end
